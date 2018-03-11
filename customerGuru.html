@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jyotsna Gupta</title>
+  <style>
+  html {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Trebuchet MS", sans-serif;
+    background-color: #ECEFF1;
+  }
+  form {
+    text-align: left;
+  }
+  label, input {
+    display: block;
+  }
+  label {
+    text-transform: uppercase;
+    color: #000;
+  }
+  input, input:valid, select, select:valid {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid #B0BEC5;
+    border-color: #000
+  }
+  input:not(:placeholder-shown):invalid{
+    border-color: #DD2C00;
+  }
+  *, *:before, *:after {
+      box-sizing: inherit;
+  }
+  </style>
+</head>
+<body>
+<center>
+  <table>
+    <form>
+      <tr>
+        <td><label>Name:</label></td>
+        <td><input type="text" id="name" placeholder="Name" pattern="^([a-zA-Z]{2,}\s?([a-zA-z]{1,})?'?-?([a-zA-Z]{2,})?\s?([a-zA-Z]{1,})?)" title="Name should be alphabets only" required></td>
+      </tr>
+      <tr>
+        <td><label>Phone:</label></td>
+        <td><input id="phone" type="text" placeholder="Phone" pattern="[0-9]{10}" title="Phone Number should be of 10 digits" required></td>
+      </tr>
+      <tr>
+        <td><label>Email ID:</label></td>
+        <td><input id="email" placeholder="Email ID" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" type="email" title="Your Email ID should look like this : abc@example.com" required></td>
+      </tr>
+      <tr>
+        <td><label for="city">City:</label></td>
+        <td><select id="city" required title="Select a city">
+          <option value="" selected  hidden>--Select City--</option>
+          <option value="NewDelhi">New Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Bangalore">Bangalore</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td colspan=2><input type="submit"></td>
+      </tr>
+    </form>
+  </table>
+</center>
+</body>
+</html>
